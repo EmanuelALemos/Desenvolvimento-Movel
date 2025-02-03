@@ -37,6 +37,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.desenvolvimentomovel.es.msgapp.viewmodel.MessageViewModel
 
@@ -58,9 +59,9 @@ fun MessageApp(viewModel: MessageViewModel) {
             TopAppBar(
                 title = {
                     Text(
-                        text = "MsgAPP",
+                        text = "BlueAPP",
                         style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.onPrimary
+                        color = MaterialTheme.colorScheme.inversePrimary
                     )
                 },
                 colors = TopAppBarDefaults.smallTopAppBarColors(
@@ -146,7 +147,7 @@ fun MessageBubble(modifier: Modifier = Modifier, isUserMessage: Boolean, content
             modifier = Modifier
                 .background(
                     color = if (isUserMessage) {
-                        MaterialTheme.colorScheme.primary
+                        MaterialTheme.colorScheme.secondary
                     } else {
                         MaterialTheme.colorScheme.surface
                     },
